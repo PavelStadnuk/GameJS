@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Programiz</title>
+		<link rel="stylesheet" type="text/css" href="cell.css" />
+	</head>
+	<body>
+		<div class="block">
+			<h1>Guess 10 cells</h1>
+			<h2>Click on cells until you find them all!</h2>
+			<div class="game-wrapper">
+				<div class="inner-block">
+					<div>
+						<p>timer:</p>
+						<p id="timer"></p>
+					</div>
+					<p id="result" class="result"></p>
+				</div>
+				<table class="game"></table>
+				<input
+					type="submit"
+					id="start-over"
+					class="start-over-button"
+					value="start-over"
+				/>
+			</div>
+			<input
+				type="submit"
+				id="start-game"
+				class="start-button"
+				value="Start the game"
+			/>
+		</div>
+		<script src="cells.js"></script>
+	</body>
+</html>
