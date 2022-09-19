@@ -14,7 +14,6 @@ let arrCells = Array.prototype.slice.call(cells)
 getrandom(arrCells, numerCells)
 userActivity(cells)
 StartOverButton.addEventListener('click', startOver)
-//create table
 function createTable(numerRows, numerCells, parent) {
 	for (let i = 1; i <= numerRows; i++) {
 		let row = document.createElement('tr')
@@ -26,7 +25,6 @@ function createTable(numerRows, numerCells, parent) {
 		}
 	}
 }
-//get random cells
 function getrandom(array, n) {
 	let shuffled = array.sort(() => 0.5 - Math.random())
 	let selected = shuffled.slice(0, n)
@@ -34,7 +32,6 @@ function getrandom(array, n) {
 		elem.classList.add('selected')
 	}
 }
-//game function to manipulate with classes
 function userActivity(elems) {
 	for (let elem of elems) {
 		elem.addEventListener('click', handler)
@@ -46,7 +43,6 @@ function userActivity(elems) {
 		}
 	}
 }
-//check is selected cell is right one
 function checkSelected(elems) {
 	for (let elem of elems) {
 		if (
@@ -60,7 +56,6 @@ function checkSelected(elems) {
 	}
 	countwin(elems, numerCells)
 }
-//if user selected all needed cells, show him  a masage
 function countwin(elems, numerCells) {
 	let arr = []
 	for (let elem of elems) {
@@ -74,7 +69,6 @@ function countwin(elems, numerCells) {
 		}
 	}
 }
-//function for start-over the game
 function startOver() {
 	for (let elem of cells) {
 		elem.classList.remove('user-selected')
@@ -87,14 +81,12 @@ function startOver() {
 	timer.innerHTML = 60
 	countDownTimer()
 }
-//function to start the game
 function start() {
 	let game = document.querySelector('.game-wrapper')
 	game.style.display = 'block'
 	StartGameButton.style.display = 'none'
 	countDownTimer()
 }
-//function for activatind  timer
 function countDownTimer() {
 	let i = 0
 	timer.innerHTML = 60
